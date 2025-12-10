@@ -1,70 +1,109 @@
-/* CSS file hai ye jo pure website ku design karta */
-
-/* Body ka style: Yaape font aur background ka design set hota */
+/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif; /* clean aur simple look ke liye ye font use kara mai */
-    background: linear-gradient(120deg, #8e9eab, #eef2f3); /* to be honest color combinations konsa rakhna bolke gpt kara mai */
-    color: #333; 
-    margin: 0; 
-    padding: 0; 
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f3f4f6;
+    color: #222;
+    line-height: 1.6;
 }
 
-/* Header ka style */
-header {
-    background: #333;
-    text-align: center; /* Header ka content center align kara */
-    padding: 1rem; /* header me spacing add kara */
-    color: #fff; 
+h1, h2, h3 {
+    margin: 0;
 }
 
-/* Navigation menu */
-nav ul {
-    list-style: none; 
-    padding: 0; 
-}
-
-nav ul li {
-    display: inline; /* Menu items ku inline dikhane ke liye */
-    margin: 0 15px; /* Menu items ke beech me thoda gap rakha */
-}
-
-nav ul li a {
-    text-decoration: none; 
-    color: #ffdd00; /* menu ke list ku Bright yellow color diya acha visible rehna bolke */
-    font-weight: bold; /* acha bold dikhna bolke */
-}
-
-section {
-    padding: 2rem; /* Sections me spacing add kara */
-    margin: 2rem auto; /* Sections ku center align kara */
-    max-width: 800px; /* Width ki limit rakha, acha padhe jana bolke */
-    text-align: center; /* Section k text ku center align kara */
-}
-
-.project {
-    background: #f5f5f5; 
-    padding: 1rem; /* Project container ke andar spacing add kara */
-    border-radius: 10px; /* acha dikhna modern bolke rounded corners rakha */
-    margin: 1rem 0; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Thoda shadow depth ke liye */
-}
-
-.project h3 {
-    color: #333; /* Dark text color headers ke liye */
-}
-
-a {
-    color: #0066cc; /* Blue color links ke liye */
-    text-decoration: none; 
-}
-
-a:hover {
-    text-decoration: underline; /* Hover karne pe underline add hota */
-}
-
-footer {
-    background: #222; 
-    text-align: center; /* Footer ka text center align kara */
-    padding: 1rem; /* Footer me spacing add kara */
+/* Header */
+.header {
+    background: #111827;
     color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* Navbar */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.nav-list li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #ffcc00;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-list a:hover {
+    color: #fff;
+}
+
+/* Sections */
+.section {
+    max-width: 900px;
+    background: #fff;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Project Card */
+.project-card {
+    background: #fafafa;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: left;
+    margin-top: 1.5rem;
+    border-left: 5px solid #2563eb;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.project-card a {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #111827;
+    color: #ddd;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
